@@ -1,11 +1,12 @@
 return {
-  "zoriya/auto-save.nvim",
+  "WinPriv/auto-save.nvim",
   opts = {
+    debounce_delay = 1000,
     print_enabled = false,
     callbacks = {
       before_saving = function()
         local mode = vim.api.nvim_get_mode()
-        if mode.mode == "i" or mode.mode == "v" then -- Don't save while we in insert mode (triggered with autopair and such)
+        if mode.mode == "i" or mode.mode == "niI" then -- Don't save while we in insert mode (triggered with autopair and such)
           vim.g.auto_save_abort = true
         else
           local buf = vim.api.nvim_get_current_buf()
