@@ -6,9 +6,7 @@ return {
     callbacks = {
       before_saving = function()
         local mode = vim.api.nvim_get_mode()
-        if mode.mode == "i" or mode.mode == "niI" then -- Don't save while we in insert mode (triggered with autopair and such)
-          vim.g.auto_save_abort = true
-        else
+        if mode.mode == "n" then -- Don't save while we in insert mode (triggered with autopair and such)
           local buf = vim.api.nvim_get_current_buf()
           local ft = vim.bo[buf].filetype
           local have_nls = #require("null-ls.sources").get_available(ft, "NULL_LS_FORMATTING") > 0
@@ -22,6 +20,8 @@ return {
               return client.name ~= "null-ls"
             end,
           }, require("lazyvim.util").opts("nvim-lspconfig").format or {}))
+        else
+          vim.g.auto_save_abort = true
         end
       end,
     },
