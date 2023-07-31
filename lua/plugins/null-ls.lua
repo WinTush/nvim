@@ -22,6 +22,7 @@ return {
           nls.formatting.astyle,
           nls.formatting.black.with({ extra_args = { "--fast" } }),
           nls.formatting.clang_format,
+          nls.formatting.djlint,
           nls.formatting.fixjson,
           nls.formatting.google_java_format,
           nls.formatting.isort,
@@ -37,6 +38,7 @@ return {
 
           -- linters
           nls.diagnostics.codespell,
+          nls.diagnostics.curlylint,
           nls.diagnostics.djlint,
           nls.diagnostics.flake8,
           nls.diagnostics.gitlint,
@@ -52,6 +54,7 @@ return {
           nls.code_actions.eslint_d,
           nls.code_actions.gitrebase,
           nls.code_actions.gitsigns,
+          nls.code_actions.refactoring,
 
           -- hover
           nls.hover.dictionary,
