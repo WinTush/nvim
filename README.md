@@ -14,7 +14,7 @@ mv ~/.config/nvim ~/.config/nvim.bak
 - Clone this repository:
 
 ```sh
-git clone https://github.com/LazyVim/starter ~/.config/nvim
+git clone https://github.com/WinTush/nvim ~/.config/nvim
 ```
 
 - Start Neovim:
