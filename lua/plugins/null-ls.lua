@@ -2,14 +2,17 @@ return {
   {
     "jose-elias-alvarez/null-ls.nvim",
     dependencies = {
-      "jay-babu/mason-null-ls.nvim",
-      config = function()
-        require("mason-null-ls").setup({
-          ensure_installed = {},
-          automatic_installation = true,
-          automatic_setup = false,
-        })
-      end,
+      "williamboman/mason.nvim",
+      {
+        "jay-babu/mason-null-ls.nvim",
+        config = function()
+          require("mason-null-ls").setup({
+            ensure_installed = {},
+            automatic_installation = true,
+            automatic_setup = false,
+          })
+        end,
+      },
     },
     opts = function()
       local nls = require("null-ls").builtins
