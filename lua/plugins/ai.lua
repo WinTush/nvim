@@ -15,7 +15,7 @@ return {
       models = {
         {
           name = "openai",
-          model = "gpt-3.5-turbo-16k",
+          model = "gpt-3.5-turbo-1106",
           params = nil,
         },
       },
@@ -79,8 +79,20 @@ return {
       "ChatGPTCompleteCode",
       "ChatGPTEditWithInstructions",
     },
-    config = true,
-    enable = true,
+    opts = {
+      openai_params = {
+        model = "gpt-3.5-turbo-1106",
+        frequency_penalty = 0,
+        presence_penalty = 0,
+        max_tokens = 12000,
+        temperature = 0,
+        top_p = 1,
+        n = 1,
+      },
+    },
+    config = function()
+      require("chatgpt").setup()
+    end,
     dependencies = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
