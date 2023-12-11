@@ -7,3 +7,10 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.b.autoformat = false
   end,
 }) -- Add any additional autocmds here
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "*" },
+  callback = function()
+    vim.opt.formatoptions = "jqlnt"
+  end,
+})

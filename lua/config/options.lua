@@ -4,7 +4,6 @@
 local opt = vim.opt
 
 opt.backup = false -- creates a backup file
-opt.formatoptions = "jqlnt"
 opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
 opt.scrolloff = 8 -- Lines of context
 opt.swapfile = false -- creates a swapfile
