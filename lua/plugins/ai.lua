@@ -69,6 +69,9 @@ return {
         },
       },
     },
+    init = function()
+      vim.treesitter.language.register("markdown", "neoai-output")
+    end,
   },
   {
     "jackMort/ChatGPT.nvim",
