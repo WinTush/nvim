@@ -15,7 +15,7 @@ return {
       models = {
         {
           name = "openai",
-          model = "gpt-3.5-turbo-1106",
+          model = "gpt-4o",
           params = nil,
         },
       },
@@ -84,7 +84,7 @@ return {
     },
     opts = {
       openai_params = {
-        model = "gpt-3.5-turbo-1106",
+        model = "gpt-4o",
         frequency_penalty = 0,
         presence_penalty = 0,
         max_tokens = 12000,
